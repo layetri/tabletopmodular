@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 2000 1000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,0,20)">
+        <path d="M1800,730L610,730L400,857.477L1600,857.477L1800,730Z" style="fill:rgb(83,83,83);fill-opacity:0.28;"/>
+    </g>
+    <g transform="matrix(1,0,0,1.2,0,-100)">
+        <rect x="400" y="200" width="1200" height="600" style="fill:rgb(74,74,74);"/>
+    </g>
+    <g transform="matrix(0.75,0,0,1,100,0)">
+        <rect x="400" y="120" width="80" height="760" style="fill:rgb(127,85,63);"/>
+    </g>
+    <g transform="matrix(0.75,0,0,1,400,0)">
+        <rect x="1520" y="120" width="80" height="760" style="fill:rgb(127,85,63);"/>
+    </g>
+    <g transform="matrix(1.03846,0,0,1,-38.4615,0)">
+        <rect x="480" y="140" width="1040" height="20" style="fill:rgb(125,125,125);"/>
+    </g>
+    <g transform="matrix(1.03846,0,0,1,-38.4615,0)">
+        <rect x="480" y="840" width="1040" height="20" style="fill:rgb(125,125,125);"/>
+    </g>
+    <g transform="matrix(1.03846,0,0,1,-38.4615,0)">
+        <rect x="480" y="480" width="1040" height="40" style="fill:rgb(125,125,125);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-20,0)">
+        <g transform="matrix(0.747657,0,0,0.747657,125.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,165.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,205.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,245.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,285.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,325.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,365.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,405.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,445.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,485.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,525.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,565.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,605.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,645.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,685.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,725.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,765.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,805.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,845.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,885.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,925.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,965.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,1005.62,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,1045.62,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,1085.62,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,1125.62,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,1165.62,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,-20,340)">
+        <g transform="matrix(0.747657,0,0,0.747657,125.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,165.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,205.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,245.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,285.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,325.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,365.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,405.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,445.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,485.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,525.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,565.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,605.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,645.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,685.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,725.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,765.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,805.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,845.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,885.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,925.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,965.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,1005.62,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,1045.62,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,1085.62,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,1125.62,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,1165.62,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,-20,360)">
+        <g transform="matrix(0.747657,0,0,0.747657,125.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,165.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,205.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,245.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,285.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,325.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,365.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,405.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,445.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,485.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,525.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,565.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,605.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,645.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,685.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,725.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,765.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,805.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,845.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,885.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,925.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,965.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,1005.62,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,1045.62,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,1085.62,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,1125.62,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,1165.62,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,-20,700)">
+        <g transform="matrix(0.747657,0,0,0.747657,125.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,165.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,205.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,245.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,285.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,325.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,365.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,405.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,445.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,485.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,525.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,565.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,605.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,645.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,685.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,725.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,765.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,805.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,845.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,885.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,925.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,965.616,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,1005.62,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,1045.62,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,1085.62,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,1125.62,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+        <g transform="matrix(0.747657,0,0,0.747657,1165.62,37.8514)">
+            <ellipse cx="500.743" cy="150" rx="10.025" ry="10" style="fill:rgb(83,83,83);"/>
+        </g>
+    </g>
+</svg>

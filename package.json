@@ -10,9 +10,19 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "autoprefixer": "^10.2.5",
         "axios": "^0.21",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
-        "postcss": "^8.1.14"
+        "postcss": "^8.2.14",
+        "tailwindcss": "^2.1.2",
+        "vue-loader": "^15.9.6",
+        "vue-template-compiler": "^2.6.12"
+    },
+    "dependencies": {
+        "laravel-echo": "^1.10.0",
+        "pusher-js": "^7.0.3",
+        "tone": "^14.7.77",
+        "vue": "^2.6.12"
     }
 }

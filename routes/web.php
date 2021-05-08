@@ -1,6 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+  use App\Http\Controllers\ApplicationController;
+  use App\Http\Controllers\RoomController;
+  use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('app');
 });
+
+Route::get('generate-key', [ApplicationController::class, 'generateKey']);
+Route::get('generate-user', [ApplicationController::class, 'generateUser']);
+
+Route::get('rooms/history', [RoomController::class, 'getHistory']);
+Route::get('rooms/open/{key}', [RoomController::class, 'getRoom']);
+Route::post('rooms/create', [RoomController::class, 'make']);
