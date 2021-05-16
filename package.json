@@ -1,28 +1,37 @@
 {
-    "private": true,
-    "scripts": {
-        "dev": "npm run development",
-        "development": "mix",
-        "watch": "mix watch",
-        "watch-poll": "mix watch -- --watch-options-poll=1000",
-        "hot": "mix watch --hot",
-        "prod": "npm run production",
-        "production": "mix --production"
-    },
-    "devDependencies": {
-        "autoprefixer": "^10.2.5",
-        "axios": "^0.21",
-        "laravel-mix": "^6.0.6",
-        "lodash": "^4.17.19",
-        "postcss": "^8.2.14",
-        "tailwindcss": "^2.1.2",
-        "vue-loader": "^15.9.6",
-        "vue-template-compiler": "^2.6.12"
-    },
-    "dependencies": {
-        "laravel-echo": "^1.10.0",
-        "pusher-js": "^7.0.3",
-        "tone": "^14.7.77",
-        "vue": "^2.6.12"
-    }
+  "private": true,
+  "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "prod": "npm run production",
+    "production": "mix --production",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@vue/compiler-sfc": "^3.0.11",
+    "autoprefixer": "^10.2.5",
+    "axios": "^0.21",
+    "babel-loader": "^8.2.2",
+    "laravel-mix": "^6.0.19",
+    "lodash": "^4.17.19",
+    "postcss": "^8.2.14",
+    "tailwindcss": "^2.1.2",
+    "vue-loader": "^16.2.0",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "dependencies": {
+    "@bugsnag/js": "^7.9.2",
+    "@bugsnag/plugin-vue": "^7.9.2",
+    "laravel-echo": "^1.10.0",
+    "pusher-js": "^7.0.3",
+    "tone": "^14.7.77",
+    "vue": "^3.0.11",
+    "vue3-mq": "^2.3.1",
+    "webpack-bugsnag-plugins": "^1.6.0"
+  }
 }

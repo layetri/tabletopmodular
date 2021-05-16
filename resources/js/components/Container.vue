@@ -6,7 +6,7 @@
           <h1 class="text-5xl text-white font-bold italic filter drop-shadow-md">Tabletop Modular</h1>
         </div>
         <button v-if="state === states.LANDING" @click="createGame()" class="my-auto uppercase font-bold italic text-sm tracking-widest bg-verdigris text-white px-6 py-2 rounded-full shadow">Create a room</button>
-        <span v-else-if="user != null" class="my-auto font-bold italic text-md">{{user.name}}</span>
+        <span v-else-if="user != null" class="my-auto font-bold italic text-md w-max">{{user.name}}</span>
       </div>
     </div>
 

@@ -2,6 +2,12 @@
   <div class="flex h-full w-full" id="host_container">
     <div class="flex-auto"></div>
     <div class="flex-auto">
+      <div class="grid grid-rows-2">
+        <div v-for="player in modules" class="p-6 absolute" :class="'bg-'+player.instrument.color">
+          {{player.name}}
+        </div>
+      </div>
+
       <img id="img_plant" :src="'/assets/plant.svg'" alt="">
     </div>
     <div class="flex-auto"></div>
@@ -12,7 +18,15 @@
   export default {
     name: "Host",
     props: {
+      user: Number,
       players: Array
+    },
+    computed: {
+      modules() {
+        return this.players.filter(p => {
+          return p.id !== this.user && p.instrument !== null;
+        });
+      }
     }
   }
 </script>

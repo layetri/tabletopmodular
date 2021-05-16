@@ -1,16 +1,34 @@
 require('./bootstrap');
-import Vue from 'vue'
+import { createApp } from 'vue';
+import VueMq from "vue3-mq";
 
-//Main pages
-Vue.component('Container', require('.//components/Container.vue').default);
-Vue.component('Landing', require('.//pages/Landing.vue').default);
-Vue.component('Game', require('.//pages/Game.vue').default);
-Vue.component('Start', require('.//pages/Start.vue').default);
+import Container from './components/Container.vue';
 
-Vue.component('Host', require('.//components/Host.vue').default);
-Vue.component('Player', require('.//components/Player.vue').default);
+const app = createApp(Container);
 
+app.config.errorHandler = (error, vm, info) => {
+  console.error({error: error, vm: vm, info: info});
+  // Bugsnag.notify(new Error({error: error, stack: vm, name: info}));
+};
 
-const app = new Vue({
-  el: '#app'
+// Register our Vue components
+app.component('Landing', require('./pages/Landing.vue').default);
+app.component('Game', require('./pages/Game.vue').default);
+app.component('Start', require('./pages/Start.vue').default);
+
+app.component('Patchbay', require('./components/Patchbay.vue').default);
+app.component('Patchcable', require('./components/Patchcable.vue').default);
+
+app.component('generic-module', require('./components/GenericModule.vue').default);
+app.component('sequencer-module', require('./components/SequencerModule.vue').default);
+
+app.use(VueMq, {
+  breakpoints: { // default breakpoints - customize this
+    sm: 640,
+    md: 768,
+    lg: Infinity,
+  }
 });
+
+// Mount the Vue application
+app.mount('#app');
