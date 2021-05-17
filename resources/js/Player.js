@@ -4,6 +4,7 @@ import Voice from "./modules/voice";
 import Filter from "./modules/filter";
 import LFO from "./modules/LFO";
 import Sequencer from "./modules/Sequencer";
+import Delay from "./modules/Delay";
 
 export default class Player {
   constructor({name, id}, connection) {
@@ -13,19 +14,22 @@ export default class Player {
     this.connection = connection;
   }
 
-  setInstrument(instrument, context) {
+  setInstrument(instrument) {
     switch (instrument) {
       case 'voice':
-        this.instrument = new Voice(context);
+        this.instrument = new Voice();
         break;
       case 'lfo':
-        this.instrument = new LFO(context);
+        this.instrument = new LFO();
         break;
       case 'filter':
-        this.instrument = new Filter(context);
+        this.instrument = new Filter();
         break;
       case 'sequencer':
         this.instrument = new Sequencer(8);
+        break;
+      case 'delay':
+        this.instrument = new Delay();
         break;
     }
   }

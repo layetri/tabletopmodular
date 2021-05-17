@@ -11,6 +11,7 @@ export default class Module {
 
   init() {
     this.process.start();
+    this.process.volume.value = -6;
   }
 
   connect(source, destination) {
