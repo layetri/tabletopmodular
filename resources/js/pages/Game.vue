@@ -189,7 +189,12 @@
 
       // Handle players leaving the room
       playerLeaves(player) {
-        this.findUser(player.id).instrument.destroy();
+        let u = this.findUser(player.id);
+
+        if(u.instrument !== null) {
+          u.instrument.destroy();
+        }
+
         this.players.splice(this.players.indexOf(player), 1);
       },
 
@@ -207,11 +212,12 @@
 
       // Create a player for testing purposes
       createTestPlayer() {
-        this.players.push(new Player({name: 'tester', id: 1000}));
-        let test_user = this.findUser(1000);
+        let id = this.players.length + 1000;
+        this.players.push(new Player({name: 'tester', id: id}));
+        let test_user = this.findUser(id);
 
         let dest;
-        if(this.players[this.currentUser].instrument.connections.input) {
+        if(this.players[this.currentUser].instrument && this.players[this.currentUser].instrument.connections.input) {
           dest = this.players[this.currentUser].instrument.connections.input.getNode();
         } else {
           dest = Tone.getDestination();

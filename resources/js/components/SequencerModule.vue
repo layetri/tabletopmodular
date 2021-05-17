@@ -33,10 +33,13 @@
         </div>
       </div>
 
-      <div class="flex-grow-0 w-1/4">
-        <div @click="instrument.toggle()" class="mb-6">
-          <img :src="'/assets/switch_on.svg'" class="w-12 mx-auto" v-if="instrument.state" alt="">
-          <img :src="'/assets/switch_off.svg'" class="w-12 mx-auto" v-else alt="">
+      <div class="flex-grow-0 w-1/4 p-4 text-center">
+        <div class="mb-6">
+          <div @click="instrument.toggle()" class="cursor-pointer">
+            <img :src="'/assets/switch_on.svg'" class="w-12 mx-auto" v-if="instrument.state" alt="">
+            <img :src="'/assets/switch_off.svg'" class="w-12 mx-auto" v-else alt="">
+          </div>
+          <small>run/stop</small>
         </div>
 
         <div v-for="(param, name) in instrument.parameters">
@@ -49,6 +52,7 @@
               data-diameter="45"
               :data-src="'/assets/knob.svg'"
               @input="setParameter(name)">
+          <br>
 
           <small>{{name}}</small>
         </div>

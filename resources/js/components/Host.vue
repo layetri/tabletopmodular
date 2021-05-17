@@ -1,16 +1,17 @@
 <template>
   <div class="flex h-full w-full" id="host_container">
-    <div class="flex-auto"></div>
-    <div class="flex-auto">
-      <div class="grid grid-rows-2">
-        <div v-for="player in modules" class="p-6 absolute" :class="'bg-'+player.instrument.color">
-          {{player.name}}
-        </div>
+    <div id="moduleGrid" class="mx-auto grid grid-rows-2 grid-flow-col">
+<!--      <div v-for="player in modules" class="text-center absolute module" :class="['bg-'+player.instrument.color, modules.indexOf(player) < 10 ? 'firstRow' : 'secondRow']" :style="{marginLeft: modules.indexOf(player)*6+'vw'}">-->
+<!--        <span class="italic font-bold text-gray-800 tracking-wide">{{player.instrument.type}}</span><br>-->
+<!--        <small class="italic font-bold text-gray-500 tracking-wide">{{player.name}}</small>-->
+<!--      </div>-->
+      <div v-for="player in modules" class="text-center module" :class="['bg-'+player.instrument.color]">
+        <span class="italic font-bold text-gray-800 tracking-wide">{{player.instrument.type}}</span><br>
+        <small class="italic font-bold text-gray-500 tracking-wide">{{player.name}}</small>
       </div>
-
-      <img id="img_plant" :src="'/assets/plant.svg'" alt="">
     </div>
-    <div class="flex-auto"></div>
+
+    <img id="img_plant" :src="'/assets/plant.svg'" alt="">
   </div>
 </template>
 
@@ -34,7 +35,7 @@
 <style scoped>
   #img_plant {
     /*transform-origin: center;*/
-    transform: translateY(53vh) translateX(-24rem);
+    transform: translateY(53vh) translateX(4rem);
     width: 20vw;
     height: auto;
     position: absolute;
@@ -47,5 +48,24 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  #moduleGrid {
+    width: 54vw;
+    bottom: calc(50vh - 18vw);
+    margin-left: 23vw;
+    position: absolute;
+  }
+
+  .module {
+    width: 6vw;
+    height: 18vw;
+  }
+
+  .firstRow {
+    bottom: 18vw;
+  }
+  .secondRow {
+    bottom: 0;
   }
 </style>

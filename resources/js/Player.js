@@ -7,7 +7,7 @@ import Sequencer from "./modules/Sequencer";
 import Delay from "./modules/Delay";
 
 export default class Player {
-  constructor({name, id}, connection) {
+  constructor({name, id, color}, connection) {
     this.id = id;
     this.name = name;
     this.instrument = null;
