@@ -57,7 +57,6 @@ export default class Filter extends Module {
   }
 
   destroy() {
-    super.process.stop();
-    // super.process.dispose();
+    this.process.dispose();
   }
 }

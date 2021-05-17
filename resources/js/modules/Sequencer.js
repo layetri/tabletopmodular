@@ -1,5 +1,6 @@
 import Module from "../Module";
 import Knob from "../class/Knob";
+import CVOutput from "../class/CVOutput";
 
 export default class Sequencer extends Module {
   constructor(steps, bpm = 120) {
@@ -20,56 +21,56 @@ export default class Sequencer extends Module {
     this.destination = null;
 
     this.parameters = {
-      speed: new Knob(120, [60, 240], 1, true, val => {
+      speed: new Knob(120, [60, 300], 1, true, val => {
         this.tpq = 60000 / val;
-
-        // TODO: find a more elegant solution for on-the-fly speed changes
-        if(this.state) {
-          this.toggle();
-          this.toggle();
-        }
       })
     }
 
-
     this.connections = {
-      pitch: {
-        type: 'cv',
-        direction: 'output',
-        patch: destination => {
-          this.destination = destination;
-        }
-      }
+      pitch: new CVOutput(
+          'pitch',
+          destination => {
+            this.destination = destination;
+          },
+          () => {
+            this.destination = null;
+          })
     }
   }
 
   toggle() {
-    if(!this.state) {
-      this.timingEngine = setInterval(() => {
-        if(this.currentStep < this.numberOfSteps - 1) {
-          this.currentStep++;
-        } else {
-          this.currentStep = 0;
-        }
-        this.handleCV();
-      }, this.tpq);
-    } else {
-      clearInterval(this.timingEngine);
-    }
-
     this.state = !this.state;
+    if(this.state) {
+      this.doStep();
+    } else {
+      clearTimeout(this.timingEngine);
+    }
+  }
+
+  doStep() {
+    if(this.state) {
+      if (this.currentStep < this.numberOfSteps - 1) {
+        this.currentStep++;
+      } else {
+        this.currentStep = 0;
+      }
+      this.handleCV();
+
+      this.timingEngine = setTimeout(() => {
+        this.doStep();
+      }, this.tpq);
+    }
   }
 
   handleCV() {
-    console.log(this.destination);
-    this.destination(this.steps[this.currentStep].value);
+    this.destination.cvHandler(this.steps[this.currentStep].value);
   }
 }
 
 class Step {
   constructor(order) {
     this.state = true;
-    this.value = 50;
+    this.value = 0;
     this.order = order;
   }
 

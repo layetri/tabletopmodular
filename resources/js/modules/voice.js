@@ -33,7 +33,7 @@ export default class Voice extends Module {
         connectedTo: null,
         handler: this.parameters.frequency.cvHandler,
         getNode: () => {
-          return this.parameters.frequency.cvHandler
+          return this.parameters.frequency
         }
       },
       output: new AudioOutput(
@@ -48,7 +48,7 @@ export default class Voice extends Module {
   }
 
   destroy() {
-    super.process.stop();
-    // super.process.dispose();
+    this.process.stop();
+    this.process.dispose();
   }
 }

@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="h-full">
     <div v-if="!ready" class="w-full text-center mt-60">
       <button @click="handleAudioPermission()" class="my-auto uppercase font-bold italic text-sm align-middle tracking-widest text-white px-6 py-2 rounded-full shadow bg-verdigris">Allow audio playback</button>
     </div>
 
-    <div v-else id="gameScreenContainer">
+    <div v-else id="gameScreenContainer" class="h-full">
       <host v-if="user.id === room.host" :user="currentUser" :players="players"></host>
       <client v-else :players="players" :user="currentUser" :room="room" :connection="connection" @set-instrument="setInstrument"></client>
     </div>
@@ -103,8 +103,10 @@
     },
     methods: {
       handleMultiplayer() {
+        // Connect to Echo private channel
         this.connection = Echo.private('room.'+this.room.key);
 
+        // Connect to Echo presence channel
         this.presence = Echo.join('presence.'+this.room.key)
             .here((players) => {
               if(players.length > this.room.max_players) {
@@ -166,22 +168,32 @@
           }
         });
       },
+
+      // Utility function: find user by id
       findUser(id) {
         return this.players.find(u => u.id === id);
       },
+
+      // Notify the UI
       notify(message, user) {
         this.popups.push({message: message, name: user});
         setTimeout(() => {
           this.popups.shift();
         }, 5000);
       },
+
+      // Handle players joining the room
       playerJoins(player) {
         this.players.push(new Player(player));
       },
+
+      // Handle players leaving the room
       playerLeaves(player) {
         this.findUser(player.id).instrument.destroy();
         this.players.splice(this.players.indexOf(player), 1);
       },
+
+      // Assign an instrument to a given player
       setInstrument(instrument, player = this.user.id) {
         this.players.find(u => u.id === player).setInstrument(instrument);
 
@@ -192,16 +204,29 @@
           });
         }
       },
+
+      // Create a player for testing purposes
       createTestPlayer() {
         this.players.push(new Player({name: 'tester', id: 1000}));
         let test_user = this.findUser(1000);
+
+        let dest;
+        if(this.players[this.currentUser].instrument.connections.input) {
+          dest = this.players[this.currentUser].instrument.connections.input.getNode();
+        } else {
+          dest = Tone.getDestination();
+        }
         test_user.setInstrument('voice');
-        test_user.instrument.connections.output.patch(Tone.getDestination());
+        test_user.instrument.connections.output.patch(dest);
       },
+
+      // Toggle local audio playback on/off
       toggleAudio() {
         this.config.localAudio = !this.config.localAudio;
         Tone.Destination.mute = !this.config.localAudio;
       },
+
+      // Handle audio permissions and setup audio
       async handleAudioPermission() {
         await Tone.start();
         this.ready = true;

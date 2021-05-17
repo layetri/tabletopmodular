@@ -1,14 +1,24 @@
 <template>
-  <div class="container mx-auto mt-36 md:mt-20">
-    <div v-if="players[user].instrument === null" class="grid grid-cols-2">
+  <div class="container mx-auto h-full">
+    <div v-if="players[user].instrument === null" class="grid grid-cols-2 mt-36 md:mt-20">
       <div v-for="option in modules[room.synth_type]" class="text-center" @click="selectModule(option)">
         <span class="uppercase font-bold tracking-wide text-palePurple cursor-pointer">{{option}}</span>
       </div>
     </div>
 
-    <div v-else>
-      <sequencer-module v-if="players[user].instrument.type === 'sequencer'" :instrument="players[user].instrument" :togglePatchbay="togglePatchbay" @patch="patch" @set-parameter="setParameter"></sequencer-module>
-      <generic-module v-else :instrument="players[user].instrument" :togglePatchbay="togglePatchbay" @patch="patch" @set-parameter="setParameter"></generic-module>
+    <div class="h-full flex flex-col place-content-center mb-36 md:mb-20" v-else>
+      <sequencer-module v-if="players[user].instrument.type === 'sequencer'"
+          :instrument="players[user].instrument"
+          :togglePatchbay="togglePatchbay"
+          @patch="patch"
+          @set-parameter="setParameter">
+      </sequencer-module>
+      <generic-module v-else
+          :instrument="players[user].instrument"
+          :togglePatchbay="togglePatchbay"
+          @patch="patch"
+          @set-parameter="setParameter">
+      </generic-module>
 
       <patchbay :players="players" :player="players[user]" :jack="selectedConnector" v-if="togglePatchbay" @patch="makeConnection"></patchbay>
     </div>

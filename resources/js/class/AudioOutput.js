@@ -1,9 +1,8 @@
-export default class AudioOutput {
+import Jack from "./Jack";
+
+export default class AudioOutput extends Jack {
   constructor(name, connectCallback, disconnectCallback) {
-    this.name = name;
-    this.direction = 'output';
-    this.type = 'audio';
-    this.connectedTo = null;
+    super(name, 'output', 'audio', null);
 
     this.connect = connectCallback;
     this.disconnect = disconnectCallback;

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-4/5 md:w-1/3 mx-auto p-8 rounded-2xl shadow-lg" :class="'bg-'+instrument.color">
+  <div class="w-4/5 md:w-1/3 p-8 mx-auto rounded-2xl shadow-lg" :class="'bg-'+instrument.color">
     <!-- A section for module information -->
     <!-- Future concept: add module manufacturer (when adding module store/API) -->
     <div class="text-center mb-4">
@@ -35,7 +35,7 @@
               class="w-10 h-auto mx-auto cursor-pointer"
               v-if="jack.connectedTo === null"
               alt="jack-unconnected">
-          <img :src="'/assets/jack_'+Math.round(Math.random() * 8)+'.svg'"
+          <img :src="'/assets/jack_'+jack.color+'.svg'"
               class="w-10 h-auto mx-auto"
               v-else
               alt="jack-connected">

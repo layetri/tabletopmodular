@@ -20,7 +20,7 @@
       <h2 class="font-bold text-white tracking-wider text-2xl mb-8">all set! your code is:</h2>
       <h1 class="text-9xl text-lightCoral font-bold mb-28 filter drop-shadow-md">{{settings.code}}</h1>
 
-      <button class="my-auto uppercase font-bold italic text-xl tracking-widest bg-verdigris text-white px-6 py-2 rounded-full shadow" @click="$emit('start-game')">start</button>
+      <button class="my-auto uppercase font-bold italic text-xl tracking-widest bg-verdigris text-white px-6 py-2 rounded-full shadow" @click="$emit('join-room', settings.code)">start</button>
     </div>
   </div>
 </template>
@@ -33,7 +33,7 @@
         step: 0,
         synths: {
           ANALOG: {name: 'analog', description: 'voice, filter, envelope, LFO, sequencer, delay'},
-          HYBRID: {name: 'hybrid', description: 'voice, filter, controller, reverb, granular, delay'}
+          // HYBRID: {name: 'hybrid', description: 'voice, filter, controller, reverb, granular, delay'}
         },
         settings: {
           players: null,

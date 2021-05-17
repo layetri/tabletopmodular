@@ -12,7 +12,7 @@ export default class Knob extends Parameter {
 
   cvHandler(value) {
     // this.value = value;
-    this.callback(value);
+    this.callback(this.value + Number(value));
   }
 
   display() {

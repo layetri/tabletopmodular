@@ -1,19 +1,20 @@
 <template>
-  <div>
+  <div class="m-0 h-full">
     <div class="fixed top-0 w-full align-middle p-4">
       <div class="container mx-auto flex">
         <div class="flex-auto">
           <h1 class="text-5xl text-white font-bold italic filter drop-shadow-md">Tabletop Modular</h1>
         </div>
-        <button v-if="state === states.LANDING" @click="createGame()" class="my-auto uppercase font-bold italic text-sm tracking-widest bg-verdigris text-white px-6 py-2 rounded-full shadow">Create a room</button>
+        <button v-if="state === states.LANDING" @click="initGameCreator()" class="my-auto uppercase font-bold italic text-sm tracking-widest bg-verdigris text-white px-6 py-2 rounded-full shadow">Create a room</button>
         <span v-else-if="user != null" class="my-auto font-bold italic text-md w-max">{{user.name}}</span>
       </div>
     </div>
 
-    <landing v-if="state === states.LANDING" @join-room="joinGame"></landing>
-    <start v-else-if="state === states.START" @create-game="startGame" @start-game="joinGame"></start>
-    <game v-else-if="state === states.GAME" :user="user" :room="room"></game>
-
+    <div class="h-full">
+      <landing class="mt-36 md:mt-20" v-if="state === states.LANDING" @join-room="joinGame"></landing>
+      <start class="mt-36 md:mt-20" v-else-if="state === states.START" @create-game="createGame" @join-room="joinGame"></start>
+      <game v-else-if="state === states.GAME" :user="user" :room="room"></game>
+    </div>
   </div>
 </template>
 
@@ -36,7 +37,7 @@
       switchState(state) {
         this.state = state;
       },
-      startGame(settings) {
+      createGame(settings) {
         axios.post('/rooms/create', {
           code: settings.code,
           max_players: settings.players,
@@ -58,7 +59,7 @@
       fetchRoom(key, callback = null) {
         axios.get('/rooms/open/'+key).then(res => {
           this.room = res.data;
-          callback();
+          if(callback !== null) callback();
         });
       },
       createUser(callback) {
@@ -68,7 +69,7 @@
           callback();
         });
       },
-      createGame() {
+      initGameCreator() {
         this.createUser(() => {
           this.state = this.states.START;
         });

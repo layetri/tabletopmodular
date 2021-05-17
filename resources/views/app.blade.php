@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" style="height: 100%;">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <script src="{{asset('js/knob.js')}}"></script>
   </head>
-  <body class="bg-melon">
-    <div id="app">
+  <body class="bg-melon h-full">
+    <div id="app" class="h-full">
       <container></container>
     </div>
   </body>
