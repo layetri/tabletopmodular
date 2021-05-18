@@ -1,11 +1,7 @@
 <template>
   <div class="flex h-full w-full" id="host_container">
     <div id="moduleGrid" class="mx-auto grid grid-rows-2 grid-flow-col">
-<!--      <div v-for="player in modules" class="text-center absolute module" :class="['bg-'+player.instrument.color, modules.indexOf(player) < 10 ? 'firstRow' : 'secondRow']" :style="{marginLeft: modules.indexOf(player)*6+'vw'}">-->
-<!--        <span class="italic font-bold text-gray-800 tracking-wide">{{player.instrument.type}}</span><br>-->
-<!--        <small class="italic font-bold text-gray-500 tracking-wide">{{player.name}}</small>-->
-<!--      </div>-->
-      <div v-for="player in modules" class="text-center module" :class="['bg-'+player.instrument.color]">
+      <div v-for="player in modules" class="text-center module p-2" :class="['bg-'+player.instrument.color]">
         <span class="italic font-bold text-gray-800 tracking-wide">{{player.instrument.type}}</span><br>
         <small class="italic font-bold text-gray-500 tracking-wide">{{player.name}}</small>
       </div>
@@ -34,7 +30,6 @@
 
 <style scoped>
   #img_plant {
-    /*transform-origin: center;*/
     transform: translateY(53vh) translateX(4rem);
     width: 20vw;
     height: auto;
@@ -60,12 +55,5 @@
   .module {
     width: 6vw;
     height: 18vw;
-  }
-
-  .firstRow {
-    bottom: 18vw;
-  }
-  .secondRow {
-    bottom: 0;
   }
 </style>

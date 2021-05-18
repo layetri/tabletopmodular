@@ -1,6 +1,6 @@
-import Jack from "./Jack";
+import Output from "./Output";
 
-export default class CVOutput extends Jack {
+export default class CVOutput extends Output {
   constructor(name, connectCallback, disconnectCallback) {
     super(name, 'output', 'cv', null);
 

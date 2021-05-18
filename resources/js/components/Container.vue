@@ -34,9 +34,12 @@
       this.state = this.states.LANDING;
     },
     methods: {
+      // Handle state change
       switchState(state) {
         this.state = state;
       },
+
+      // Create a room and pre-connect to it
       createGame(settings) {
         axios.post('/rooms/create', {
           code: settings.code,
@@ -47,6 +50,8 @@
           this.created = true;
         });
       },
+
+      // Join a room by its code
       joinGame(room = null) {
         this.createUser(() => {
           if(room != null) {
@@ -56,19 +61,24 @@
           }
         });
       },
+
+      // GET a room from the server
       fetchRoom(key, callback = null) {
         axios.get('/rooms/open/'+key).then(res => {
           this.room = res.data;
           if(callback !== null) callback();
         });
       },
+
+      // Create a new user on the server, and get its details
       createUser(callback) {
-        // Create a new user or retrieve an existing one
         axios.get('/generate-user').then(res => {
           this.user = res.data;
           callback();
         });
       },
+
+      // Start the room creator wizard
       initGameCreator() {
         this.createUser(() => {
           this.state = this.states.START;

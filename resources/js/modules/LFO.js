@@ -39,6 +39,6 @@ export default class Filter extends Module {
 
   destroy() {
     super.process.stop();
-    // super.process.dispose();
+    super.process.dispose();
   }
 }

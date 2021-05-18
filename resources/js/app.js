@@ -6,11 +6,6 @@ import Container from './components/Container.vue';
 
 const app = createApp(Container);
 
-app.config.errorHandler = (error, vm, info) => {
-  console.error({error: error, vm: vm, info: info});
-  // Bugsnag.notify(new Error({error: error, stack: vm, name: info}));
-};
-
 // Register our Vue components
 app.component('Landing', require('./pages/Landing.vue').default);
 app.component('Game', require('./pages/Game.vue').default);

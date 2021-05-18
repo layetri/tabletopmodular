@@ -40,7 +40,7 @@
         <div class="flex-auto"></div>
 
         <div>
-          <button class="mr-4 my-auto uppercase font-bold italic text-sm align-middle tracking-widest text-white px-6 py-2 rounded-full shadow bg-red-500" @click="createTestPlayer()">
+          <button v-if="DEVMODE" class="mr-4 my-auto uppercase font-bold italic text-sm align-middle tracking-widest text-white px-6 py-2 rounded-full shadow bg-red-500" @click="createTestPlayer()">
             create test player
           </button>
 
@@ -77,6 +77,7 @@
     },
     data() {
       return {
+        DEVMODE: false,
         players: [],
         modules: [],
         currentUser: null,
@@ -123,7 +124,7 @@
               this.notify('joined the game', player.name);
               this.playerJoins(player);
 
-              if(this.players[this.user].id === this.room.host) {
+              if(this.user.id === this.room.host) {
                 this.connection.whisper('welcome-player', {
                   players: this.players
                 });
@@ -133,6 +134,7 @@
               this.playerLeaves(player);
             });
 
+        // TODO: HANDLE PLAYER JOINING
         // Handle runtime information about players
         this.connection.listenForWhisper('welcome-player', (players) => {
           for(let i = 0; i < this.players.length; i++) {
@@ -194,7 +196,6 @@
         if(u.instrument !== null) {
           u.instrument.destroy();
         }
-
         this.players.splice(this.players.indexOf(player), 1);
       },
 

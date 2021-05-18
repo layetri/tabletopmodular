@@ -90,9 +90,12 @@
       instrument: Object
     },
     methods: {
+      // Emits the set parameter event
       setParameter(name) {
         this.$emit('set-parameter', name);
       },
+
+      // Emits the patch event
       patch(jack, name) {
         this.$emit('patch', jack, name);
       }

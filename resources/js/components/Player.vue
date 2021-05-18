@@ -37,7 +37,9 @@
     data() {
       return {
         modules: {
-          ANALOG: ['voice', 'filter', 'envelope', 'LFO', 'sequencer', 'delay'],
+          //ANALOG: ['voice', 'filter', 'envelope', 'LFO', 'sequencer', 'delay'],
+          // Only select modules that are available in the prototype
+          ANALOG: ['voice', 'filter', 'sequencer', 'delay'],
           HYBRID: ['voice', 'filter', 'controller', 'reverb', 'granular', 'delay']
         },
         parameterBlocking: false,
@@ -49,13 +51,18 @@
       }
     },
     methods: {
+      // Handle user selecting a module
       selectModule(instrument) {
         this.$emit('set-instrument', instrument);
       },
+
+      // Open patchbay
       patch(jack, name) {
         this.selectedConnector = {name: name, connector: jack};
         this.togglePatchbay = true;
       },
+
+      // Handle parameter setting change
       setParameter(name) {
         this.players[this.user].instrument.parameters[name].handler();
 
@@ -75,6 +82,8 @@
           }, 100);
         }
       },
+
+      // Connect two ports together
       makeConnection({sourcePort, destination, destinationPort}) {
         let user = null;
         if(destinationPort !== 'globalConnector') {

@@ -1,6 +1,6 @@
-import Jack from "./Jack";
+import Output from "./Output";
 
-export default class AudioOutput extends Jack {
+export default class AudioOutput extends Output {
   constructor(name, connectCallback, disconnectCallback) {
     super(name, 'output', 'audio', null);
 

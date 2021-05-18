@@ -21,9 +21,7 @@ export default class Voice extends Module {
     // Initialize the module's core function (e.g. sound source or custom process)
     super.process = new Tone.Oscillator(440, 'sine');
     super.init();
-
-    // TODO: add second oscillator for more sound possibilities
-    // super.process = [new Tone.Oscillator(440, 'sine'), new Tone.Oscillator(438, 'sine')];
+    // [Future]: add second oscillator for more sound possibilities
 
     // Fill the module's connection array
     super.connections = {
@@ -49,6 +47,6 @@ export default class Voice extends Module {
 
   destroy() {
     this.process.stop();
-    this.process.dispose();
+    // this.process.dispose();
   }
 }

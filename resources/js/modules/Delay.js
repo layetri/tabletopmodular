@@ -40,7 +40,6 @@ export default class Delay extends Module {
   }
 
   destroy() {
-    // super.process.stop();
     this.process.dispose();
   }
 }

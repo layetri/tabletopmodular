@@ -58,9 +58,12 @@ export default {
     togglePatchbay: Boolean
   },
   methods: {
+    // Emits the patch event
     patch(jack, name) {
       this.$emit('patch', jack, name);
     },
+
+    // Emits the parameter change event
     setParameter(name) {
       this.$emit('set-parameter', name);
     }

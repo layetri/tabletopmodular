@@ -34,6 +34,7 @@
       });
     },
     methods: {
+      // Propagate room joining to the parent component
       joinRoom() {
         this.$emit('join-room', this.key);
       }

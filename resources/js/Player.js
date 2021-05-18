@@ -1,7 +1,5 @@
-import Module from "./Module";
-
-import Voice from "./modules/voice";
-import Filter from "./modules/filter";
+import Voice from "./modules/Voice";
+import Filter from "./modules/Filter";
 import LFO from "./modules/LFO";
 import Sequencer from "./modules/Sequencer";
 import Delay from "./modules/Delay";
@@ -32,9 +30,5 @@ export default class Player {
         this.instrument = new Delay();
         break;
     }
-  }
-
-  controlInstrument(parameter, value) {
-    this.instrument.set(parameter, value);
   }
 }

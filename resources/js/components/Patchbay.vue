@@ -54,6 +54,7 @@
       }
     },
     methods: {
+      // Connect two modules together (propagates to parent)
       patch(source, sourcePort, destination, destinationPort) {
         source.patch(destination.getNode());
 
@@ -61,6 +62,7 @@
       },
     },
     computed: {
+      // Find available modules
       modules() {
         let arr = [];
         for(let i = 0; i < this.players.length; i++) {
@@ -71,6 +73,8 @@
 
         return arr;
       },
+
+      // Find available connections
       connections() {
         let arr = {};
         for(let i = 0; i < this.modules.length; i++) {
@@ -84,18 +88,6 @@
           }
           if(Object.keys(cons).length > 0 && this.modules[i].instrument.type !== undefined) {
             arr[this.modules[i].instrument.type] = cons;
-          }
-        }
-        return arr;
-      },
-      cvConnections() {
-        let arr = [];
-        for(let i = 0; i < this.modules.length; i++) {
-          for(let j = 0; j < this.modules[i].connections.length; j++) {
-            let connection = this.modules[i].connections[j];
-            if(connection.type === this.connection.type && connection.direction !== this.connection.direction) {
-              arr.push(connection);
-            }
           }
         }
         return arr;

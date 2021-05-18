@@ -43,6 +43,8 @@
       }
     },
     created() {
+      // Generate a key server-side
+      // Why? PHP > JS
       axios.get('/generate-key').then(res => {
         this.settings.code = res.data;
       });

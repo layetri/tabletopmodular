@@ -1,4 +1,4 @@
-export default class Jack {
+export default class Output {
   constructor(name, direction, type, connectedTo) {
     this.name = name;
     this.direction = direction;

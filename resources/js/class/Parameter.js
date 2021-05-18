@@ -1,7 +1,3 @@
-// Parameter superclass
-// Provides generic component for various module parameters
-// © 2021 Daniël Kamp
-
 export default class Parameter {
   constructor(value, range, step, cv, callback) {
     this.value = value;

@@ -1,5 +1,5 @@
 # Tabletop Modular
-Tabletop Modular is an online multiplayer experience where players can play and interact with a virtual modular synthesizer. You can play it live at [https://tabletopmodular.mt.layetri.nl/](https://tabletopmodular.mt.layetri.nl/) (temporary location).
+Tabletop Modular is an online multiplayer experience where players can play and interact with a virtual modular synthesizer. You can play it live at [https://modular.mt.layetri.nl/](https://modular.mt.layetri.nl/) (temporary location).
  
 Tabletop Modular uses the following libraries/frameworks:
 - Laravel
