@@ -1,6 +1,6 @@
 <template>
   <div class="flex h-full w-full" id="host_container">
-    <div id="moduleGrid" class="mx-auto grid grid-rows-2 grid-flow-col">
+    <div id="moduleGrid" class="mx-auto grid grid-rows-2 grid-flow-col" :style="{width: modules.length / 2 * 6+'vw'}">
       <div v-for="player in modules" class="text-center module p-2" :class="['bg-'+player.instrument.color]">
         <span class="italic font-bold text-gray-800 tracking-wide">{{player.instrument.type}}</span><br>
         <small class="italic font-bold text-gray-500 tracking-wide">{{player.name}}</small>
@@ -46,7 +46,7 @@
   }
 
   #moduleGrid {
-    width: 54vw;
+    /*width: 54vw;*/
     bottom: calc(50vh - 18vw);
     margin-left: 23vw;
     position: absolute;

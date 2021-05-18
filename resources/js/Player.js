@@ -5,11 +5,11 @@ import Sequencer from "./modules/Sequencer";
 import Delay from "./modules/Delay";
 
 export default class Player {
-  constructor({name, id, color}, connection) {
+  constructor({name, id, color}, current) {
     this.id = id;
     this.name = name;
     this.instrument = null;
-    this.connection = connection;
+    this.isCurrentUser = this.id === current;
   }
 
   setInstrument(instrument) {

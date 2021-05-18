@@ -5,12 +5,9 @@ export default class Toggle extends Parameter {
     super(true, [false, true], 1, cv, callback);
   }
 
-  set() {
-    this.value = !this.value;
-  }
-
   handler() {
-    this.callback(this.value);
+    this.value = !this.value;
+    this.callback();
   }
 
   cvHandler(value) {

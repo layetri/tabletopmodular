@@ -6,7 +6,7 @@
 
     <div v-else id="gameScreenContainer" class="h-full">
       <host v-if="user.id === room.host" :user="currentUser" :players="players"></host>
-      <client v-else :players="players" :user="currentUser" :room="room" :connection="connection" @set-instrument="setInstrument"></client>
+      <client v-else :players_ext="players" :user="currentUser" :room="room" :connection="connection" @set-instrument="setInstrument"></client>
     </div>
 
     <div class="fixed w-full bottom-0">
@@ -97,9 +97,8 @@
       }
     },
     created() {
-      let user = new Player(this.user);
+      let user = new Player(this.user, this.user.id);
       this.players.push(user);
-      this.currentUser = this.players.length - 1;
 
       this.handleMultiplayer();
     },
@@ -111,7 +110,6 @@
         // Connect to Echo presence channel
         this.presence = Echo.join('presence.'+this.room.key)
             .here((players) => {
-              console.log(players);
               if(players.length > this.room.max_players) {
                 this.connection.leave();
                 this.presence.leave();
@@ -124,13 +122,15 @@
                     this.playerJoins(players[i]);
                   }
                 }
+
+                this.currentUser = this.players.findIndex(u => u.id === this.user.id);
               }
             }).joining((player) => {
               this.notify('joined the game', player.name);
               this.playerJoins(player);
 
               if(this.user.id === this.room.host) {
-                let arr = []
+                let arr = [];
                 for(let usr in this.players) {
                   if(this.players[usr].instrument !== null) {
                     arr.push({user: this.players[usr].id, instrument: this.players[usr].instrument.type, parameters: this.players[usr].instrument.parameters});
@@ -171,6 +171,12 @@
           this.findUser(player).instrument.setParameter(parameter, value);
         });
 
+        // Handle step change
+        this.connection.listenForWhisper('set-step', ({player, step, value}) => {
+          console.log('setting step '+ step +' to '+ value);
+          this.findUser(player).instrument.steps[step].value = value;
+        });
+
         // Handle patch connection change
         this.connection.listenForWhisper('patch', ({source, destination}) => {
           const src = this.findUser(source.user).instrument.connections[source.port];
@@ -199,7 +205,7 @@
 
       // Handle players joining the room
       playerJoins(player) {
-        this.players.push(new Player(player));
+        this.players.push(new Player(player, this.user.id));
       },
 
       // Handle players leaving the room
@@ -207,6 +213,14 @@
         let u = this.findUser(player.id);
 
         if(u.instrument !== null) {
+        //   for(let i = 0; i < this.players.length; i++) {
+        //     for(let c in this.players[i].instrument.connections) {
+        //       console.log(c);
+        //       if(u.instrument.connections.includes(this.players[i].instrument.connections[c].connectedTo)) {
+        //         this.players[i].instrument.connections[c].disconnect();
+        //       }
+        //     }
+        //   }
           u.instrument.destroy();
         }
         this.players.splice(this.players.indexOf(player), 1);

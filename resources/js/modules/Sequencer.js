@@ -1,6 +1,7 @@
 import Module from "../Module";
 import Knob from "../class/Knob";
 import CVOutput from "../class/CVOutput";
+import Toggle from "../class/Toggle";
 
 export default class Sequencer extends Module {
   constructor(steps, bpm = 120) {
@@ -23,6 +24,10 @@ export default class Sequencer extends Module {
     this.parameters = {
       speed: new Knob(120, [60, 300], 1, true, val => {
         this.tpq = 60000 / val;
+      }),
+      toggle: new Toggle(false, false, () => {
+        console.log('toggled');
+        this.toggle()
       })
     }
 
@@ -48,6 +53,7 @@ export default class Sequencer extends Module {
   }
 
   doStep() {
+    console.log('step');
     if(this.state) {
       if (this.currentStep < this.numberOfSteps - 1) {
         this.currentStep++;

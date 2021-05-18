@@ -28,33 +28,33 @@
                 class="input-knob"
                 data-diameter="45"
                 :data-src="'/assets/knob.svg'"
-                @change="setParameter(name)">
+                @change="setStep(step.order)">
           </div>
         </div>
       </div>
 
       <div class="flex-grow-0 w-1/4 p-4 text-center">
         <div class="mb-6">
-          <div @click="instrument.toggle()" class="cursor-pointer">
+          <div @click="setParameter('toggle')" class="cursor-pointer">
             <img :src="'/assets/switch_on.svg'" class="w-12 mx-auto" v-if="instrument.state" alt="">
             <img :src="'/assets/switch_off.svg'" class="w-12 mx-auto" v-else alt="">
           </div>
           <small>run/stop</small>
         </div>
 
-        <div v-for="(param, name) in instrument.parameters">
+        <div>
           <input type="range"
-              :min="param.range[0]"
-              :max="param.range[1]"
-              :step="param.step"
-              v-model="param.value"
+              :min="instrument.parameters.speed.range[0]"
+              :max="instrument.parameters.speed.range[1]"
+              :step="instrument.parameters.speed.step"
+              v-model="instrument.parameters.speed.value"
               class="input-knob"
               data-diameter="45"
               :data-src="'/assets/knob.svg'"
-              @input="setParameter(name)">
+              @input="setParameter('speed')">
           <br>
 
-          <small>{{name}}</small>
+          <small>speed</small>
         </div>
       </div>
     </div>
@@ -93,6 +93,11 @@
       // Emits the set parameter event
       setParameter(name) {
         this.$emit('set-parameter', name);
+      },
+
+      // Emits the set step event
+      setStep(index) {
+        this.$emit('set-step', index);
       },
 
       // Emits the patch event
