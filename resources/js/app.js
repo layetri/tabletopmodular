@@ -12,7 +12,6 @@ app.component('Game', require('./pages/Game.vue').default);
 app.component('Start', require('./pages/Start.vue').default);
 
 app.component('Patchbay', require('./components/Patchbay.vue').default);
-app.component('Patchcable', require('./components/Patchcable.vue').default);
 
 app.component('generic-module', require('./components/GenericModule.vue').default);
 app.component('sequencer-module', require('./components/SequencerModule.vue').default);

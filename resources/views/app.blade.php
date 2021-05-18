@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" style="height: 100%;">
+<html lang="en" class="h-full top-0 overflow-hidden">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport"

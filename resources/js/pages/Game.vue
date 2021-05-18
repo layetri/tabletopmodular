@@ -139,6 +139,7 @@
         this.connection.listenForWhisper('welcome-player', (players) => {
           for(let i = 0; i < this.players.length; i++) {
             let player = players.find(u => u.id = this.players[i].id);
+            console.log(players);
             if(player.instrument !== null) {
               this.players[i].setInstrument(player.instrument.type);
             }

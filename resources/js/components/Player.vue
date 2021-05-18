@@ -6,7 +6,7 @@
       </div>
     </div>
 
-    <div class="h-full flex flex-col place-content-center mb-36 md:mb-20" v-else>
+    <div class="h-full flex flex-col place-content-center" v-else>
       <sequencer-module v-if="players[user].instrument.type === 'sequencer'"
           :instrument="players[user].instrument"
           :togglePatchbay="togglePatchbay"
