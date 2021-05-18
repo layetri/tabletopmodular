@@ -91,7 +91,6 @@
 
       // Handle sequencer step setting change
       setStep(id) {
-        console.log('whisper step');
         // Throttle events because Pusher is expensive and LaravelEchoServer is a pain to set up
         if(this.parameterBlocking !== 'step-'+id) {
           clearTimeout(this.blockingTimer);

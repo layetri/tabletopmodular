@@ -26,7 +26,6 @@ export default class Sequencer extends Module {
         this.tpq = 60000 / val;
       }),
       toggle: new Toggle(false, false, () => {
-        console.log('toggled');
         this.toggle()
       })
     }
@@ -53,7 +52,6 @@ export default class Sequencer extends Module {
   }
 
   doStep() {
-    console.log('step');
     if(this.state) {
       if (this.currentStep < this.numberOfSteps - 1) {
         this.currentStep++;

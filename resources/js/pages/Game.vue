@@ -173,7 +173,6 @@
 
         // Handle step change
         this.connection.listenForWhisper('set-step', ({player, step, value}) => {
-          console.log('setting step '+ step +' to '+ value);
           this.findUser(player).instrument.steps[step].value = value;
         });
 
