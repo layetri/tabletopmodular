@@ -83,6 +83,7 @@
         currentUser: null,
         popups: [],
         ready: false,
+        uninitialized: true,
 
         visuals: {
           showPlayers: false
@@ -110,10 +111,14 @@
         // Connect to Echo presence channel
         this.presence = Echo.join('presence.'+this.room.key)
             .here((players) => {
+              console.log(players);
               if(players.length > this.room.max_players) {
                 this.connection.leave();
                 this.presence.leave();
               } else {
+                if(players.filter(u => u.id !== this.room.host).length === 1) {
+                  this.uninitialized = false;
+                }
                 for (let i = 0; i < players.length; i++) {
                   if (players[i].id !== this.user.id) {
                     this.playerJoins(players[i]);
@@ -125,8 +130,14 @@
               this.playerJoins(player);
 
               if(this.user.id === this.room.host) {
+                let arr = []
+                for(let usr in this.players) {
+                  if(this.players[usr].instrument !== null) {
+                    arr.push({user: this.players[usr].id, instrument: this.players[usr].instrument.type, parameters: this.players[usr].instrument.parameters});
+                  }
+                }
                 this.connection.whisper('welcome-player', {
-                  players: this.players
+                  players: arr
                 });
               }
             }).leaving((player) => {
@@ -136,15 +147,16 @@
 
         // TODO: HANDLE PLAYER JOINING
         // Handle runtime information about players
-        this.connection.listenForWhisper('welcome-player', (players) => {
-          for(let i = 0; i < this.players.length; i++) {
-            let player = players.find(u => u.id = this.players[i].id);
-            console.log(players);
-            if(player.instrument !== null) {
-              this.players[i].setInstrument(player.instrument.type);
+        if(this.uninitialized) {
+          this.connection.listenForWhisper('welcome-player', data => {
+            let players = data.players;
+            for (let i = 0; i < players.length; i++) {
+              let player = this.players.find(u => u.id === players[i].user);
+              player.setInstrument(players[i].instrument);
             }
-          }
-        });
+            this.uninitialized = false;
+          });
+        }
 
         // Handle instrument change
         this.connection.listenForWhisper('set-instrument', ({instrument, player}) => {
