@@ -1,0 +1,2 @@
+### Zelfreflectie
+Ik vond het een erg leuk project om aan te werken. Ik heb vooral gebruik gemaakt van tools en frameworks die ik al ken, en deze ingezet op een nieuwe manier. Hierdoor kon ik snel iets werkend krijgen, wat erg motiverend werkte om meer tijd in het project te steken. Hierdoor heb ik veel gedaan gekregen en is het project volgens mij zeer geslaagd. Ik heb er in totaal ongeveer 55 uur in gestoken, inclusief ontwerp.
